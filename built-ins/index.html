@@ -1,0 +1,203 @@
+<html>
+    <head>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <title>Built-ins / Defaults</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div x-data="{ selectedVal: 'website' }">
+            <select x-model="selectedVal" x-data="{ options: options }">
+                <template x-for="(label, value) in options">
+                    <option :value="value" x-text="label"></option>
+                </template>            
+            </select>
+            <div x-data="{ features: features }">
+                <ul>
+                    <template x-for="(changeable, feature) in features[selectedVal]">
+                        <li>
+                            <span  :class="changeable ? 'changeable' : 'unchangeable'" x-text="feature"></span>
+                        </li>
+                    </template>
+                </ul>
+        </div>
+    </body>
+</html>
+
+<script>
+    const options = {
+        website: 'Websites',
+        games: 'Games',
+        ai: 'AI',
+        ml: 'Machine Learning',
+        'interactive-installation': 'Interactive Installation',
+        'data-visualization': 'Data Visualization',
+        narratives: 'Narratives'
+    }
+
+    const features = {
+        general: {
+            "Source of technology (of course, all tracing back to military-industrial but still) - open source, community-based, arts-oriented, industrial, commercial, licensed": true,
+            "Longevity/particularity of technology, relationship to obsolescence, importance of archivability": true,
+            "Hardware components (the materials that compose them)": true,
+            "Online vs Offline vs local area network": true,
+            "Relationship to reality outside the screen: time, weather, energy use": true,
+        },
+        website: {
+            'Spatial metaphors (index, posts, contact)': true,
+            'Domains, .us/.in': false,
+            'Discoverability ': false,
+            'Host (e.g. github, heroku, amazon web services)': true,
+            'Coding capability (Wordpress.org vs .com for instance)': true,
+            'How long till interaction changes something on the screen like is it a fast response, speed of interaction': true,
+            "friction of interaction: how it facilitates or breaks 'ultimate smooth flow' (re: Feed Time reading), smooth? laggy?": true,
+            'Types of interaction: scroll, tap, hold, swipe, long press': true,
+            'Font': true,
+            'CMS or content management system': true,
+            'Frontpage or splash': true,
+            'CTAs , visual or text hierarchies': true,
+            'How long it takes to load (amt of processing needed)': true,
+            'Visitor interaction (e.g. contact or guestbook, comments, etc.)': true,
+            'Mobile interface': false,
+            'Active or passive (e.g. a video stream vs clickable)': true,
+            'Access point: Computer': false,
+            'Accessiblity i.e. for the visually impaired': true,
+            'Language used on the site': true,
+            'Content ': false,
+            'Pop-ups - size, how easy to close, frequency': true,
+            'Links opening in new tab or replacing current tab': true,
+            'Style: brutalist, 90s, “clean” “slick”': true,
+            'Presence of trackers/tracking': true,
+            'Requirements for access: do you have to have an account, give them data': true,
+            'How space is used: are there ads, is there a lot of whitespace': true,
+            'Interactions with others built in? social?': true,
+            "Visual feature: light - emanating from screen": true,
+            'What can be acted on: what’s clickable/interactable, what’s not' : true
+        },
+        games: {
+            'Some type of objective': true,
+            'How many characters and how do they interact (e.g. RPG, MMORPG, side scroller)': true,
+            'Rules': true,
+            'World ': true,
+            'Narrative or non-narrative': true,
+            'Technology, or medium for interaction': true,
+            'Symbolisms and terminologies': true,
+            'Characters or user POV': true,
+            'Possibility of endlessness / rebirth i.e. spawning': true,
+            'Music + sound effects  (Aneesa) - not sure': true,
+            'A story… with an outlined set of steps you can and can’t take': true,
+            "Access point: Based on a phone, computer, tabletop, relies only on bodies (rock paper scissors)": false
+        },
+        "ai/ml": {
+            'code ( the llm, neural network, models)': false,
+            'Training Dataset': false,
+            'Output: images, video, text': false,
+            'How you display the output(website, paper, post)': false,
+            'Visual guide for text or visual prompts': false,
+            'Energy/resource requirements': false,
+            "visual slickness": false,
+            "uncanniness": false
+
+        },
+        'interactive-installation': {
+            'Physical space (e.g. room size, lighting, sound)': false,
+            'Interactivity level (e.g. passive observation vs active participation)': true,
+            'Some type of interface': true, 
+            'Manual or guides for interaction': true,
+            'Interface device / Technology (screen, kinect, sensors)': true,
+            'Screen or speakers to act as the medium of expression for the interactive installation': true,
+            'User becomes a part of the installation and a subject to the constraints (intended and unintended) of the installation': true,
+            'Narrative/ worldbuilding': true,
+            'Projection': true,
+            'Navigational cues': true,
+
+        },
+        'data-visualization': {
+            'Visual ledger': true,
+            'Text hierarchies': true,
+            'Data': false,
+            'Where the data is from': true,
+            'Use of color and visual design as informational aide': true,
+            'interactivity of the visualization by visitors': true,
+            'representation of data (e.g text vs image )': true,
+            'Translation': true,
+            'Text/shape hierarchy: what’s big, what’s small': true,
+            'Use of color as an informational aide': true,
+            'Abstraction': true
+
+        },
+        narratives: { 
+            'Language, size, color, font of text': true,
+            'Text layout': true,
+            'A story (and its structure: chapters, acts, non-linearity…)': true,
+            'Hyperlinks & their visual display (how they are differentiated from other text)': true,
+            'Order of elements to access': true,
+            'Access (HTML in browser, downloaded file. Where these things are hosted)': true,
+            'Interface (how you move agentially through the elements—clicking, touching with finger, etc)': true,
+            'Language used on the site - can it be changed? Does translation affect the narrative?  (Aneesa)': true,
+            'Physical environment when accessing i.e. following narrative on the subway vs in bed': true,
+            'Reading format (left to right, top to bottom)': true,
+            'Characters + history/stereotypes of characters  (Aneesa)': true,
+            'a story': true,
+            'characters': true,
+            'setting': true,
+            'linear/non-linear': true,
+         }
+    }
+
+
+</script>
+
+<style>
+    body {
+        font-family: 'Nunito', sans-serif;
+        padding: 2rem;
+    }
+
+    select {
+        font-size: 1rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    ul {
+        font-size: 1rem;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-rows: auto;
+    }
+
+    li {
+        margin: 1.0rem;
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    .changeable {
+        display: block;
+        font-size: 1.2rem;
+        animation-name: changeAnim;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; /* or a specific number */
+    }
+
+    .unchangeable {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    @keyframes changeAnim {
+      0% {
+        transform: scale(1); /* Starting state */
+      }
+      50% {
+        transform: scale(1.2) rotate(10deg); /* Intermediate state */
+      }
+      100% {
+        transform: scale(1); /* Ending state, returning to original size */
+      }
+    }
+
+</style>

@@ -1,0 +1,169 @@
+<html>
+<head>
+    <title>ICAA: On Mediums</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <body>
+        <ul id="mediumsList">
+
+        </ul>
+
+    </body>
+</head>
+</html>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Zain", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+    
+    li {
+        background-color: #f0f0f0;
+        padding: 3.2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+    }
+
+    li.selected {
+        background-color: #c0e4ff;
+    }
+
+    li.unavailable {
+        opacity: 0.2;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    li.remove {
+        display: none;
+    }
+</style>
+
+<script>
+    const mediums = [
+        "Games",
+        "Photography",
+        "Fictional story/book",
+        "Painting",
+        "Physical Archive",
+        "Cinema",
+        "Classical sculpting technique",
+        "Music– practicing in a space with people (a band) using physical instruments",
+        "Analog/Traditional 2D Art (pencil, ink, marker, etc)",
+        "Clay modeling",
+        "Analog sound art or DIY instruments",
+        "Liquid light show (using liquids of different viscosities and material properties to create interesting shapes, which are then projected)",
+        "Performance, seminar, lecture, in-person sociality",
+        "Hand-drawn animation",
+        "Eurorack (Analog modular audio synthesis)",
+        "DJing (physical turntables, mixing in real time for live audiences)",
+        "Virtual Reality (VR)",
+        "Augmented Reality (AR)",
+        "Mixed Reality (MR)",
+        "3D Modeling and Animation",
+        "Websites",
+        "Digital Archives",
+        "Interactive Installations / Real time art",
+        "Twine / interactive story",
+        "Image/Video in Feed, exhibition or installation format",
+        "Videogames",
+        "Digital 2D Art (programs like Adobe, Procreate, etc)",
+        "Digital 3D sculpting (+scanning +printing)",
+        "Visual Jockeying (VJ)",
+        "Live-coding music",
+        "Garageband, virtual instruments, exchanges of samples, mp3s",
+        "VCV rack (virtual simulation)"
+    ];
+
+    const mediumMappings = {
+        "Games": [],
+        "Cinema": [],
+        "Photography": [],
+        "Fictional story/book": [],
+        "Painting": [],
+        "Physical Archive": [],
+        "Classical sculpting technique": [],
+        "Music– practicing in a space with people (a band) using physical instruments": [],
+        "Analog/Traditional 2D Art (pencil, ink, marker, etc)": [],
+        "Clay modeling": [],
+        "Analog sound art or DIY instruments": [],
+        "Liquid light show (using liquids of different viscosities and material properties to create interesting shapes, which are then projected)": [],
+        "Performance, seminar, lecture, in-person sociality": [],
+        "Hand-drawn animation": [],
+        "Eurorack (Analog modular audio synthesis)": [],
+        "DJing (physical turntables, mixing in real time for live audiences)": [],
+        "Virtual Reality (VR)": [],
+        "Augmented Reality (AR)": [],
+        "Mixed Reality (MR)": [],
+        "3D Modeling and Animation": [],
+        "Websites": [
+            "Painting",
+            "Cinema"
+        ],
+        "Digital Archives": [],
+        "Interactive Installations / Real time art": [],
+        "Twine / interactive story": [],
+        "Image/Video in Feed, exhibition or installation format": [],
+        "Videogames": [],
+        "Digital 2D Art (programs like Adobe, Procreate, etc)": [],
+        "Digital 3D sculpting (+scanning +printing)": [],
+        "Visual Jockeying (VJ)": [],
+        "Live-coding music": [],
+        "Garageband, virtual instruments, exchanges of samples, mp3s": [],
+        "VCV rack (virtual simulation)": []
+    };
+    const mediumsList = document.getElementById('mediumsList');
+
+    mediums.forEach(medium => {
+        const li = document.createElement('li');
+        li.className = 'medium';
+        li.textContent = medium;
+        mediumsList.appendChild(li);
+    });
+
+    const relatedMediumsSection = document.getElementById('relatedMediums');
+
+    mediumsList.addEventListener('click', (e) => {
+        let medium = e.target;
+        medium.classList.toggle('selected');
+        let mediumName = medium.textContent;
+
+          // Check how many are already selected
+        let selectedMediums = document.querySelectorAll('.medium.selected');
+  
+        if (selectedMediums.length === 2) {
+            document.querySelectorAll('.medium').forEach(med => {
+                if (!med.classList.contains('selected')) {
+                    med.classList.add('remove');
+                }
+            });
+        } else {
+            let relatedMediums = mediumMappings[mediumName];    
+            // highlight related mediums
+            document.querySelectorAll('.medium').forEach(med => {
+                if (med.textContent !== mediumName && !relatedMediums.includes(med.textContent)) {
+                    med.classList.add('unavailable');
+                } else {
+                    med.classList.remove('unavailable');
+                }
+            });
+        }
+    });
+
+
+
+</script>
