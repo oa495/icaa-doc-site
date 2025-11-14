@@ -16,8 +16,8 @@
             <div x-data="{ features: features }">
                 <ul>
                     <template x-for="(changeable, feature) in features[selectedVal]">
-                        <li>
-                            <span  :class="changeable ? 'changeable' : 'unchangeable'" x-text="feature"></span>
+                        <li @click="showTooltip">
+                            <span contenteditable="true"  :class="changeable ? 'changeable' : 'unchangeable'" x-text="feature"></span>
                         </li>
                     </template>
                 </ul>
@@ -29,8 +29,7 @@
     const options = {
         website: 'Websites',
         games: 'Games',
-        ai: 'AI',
-        ml: 'Machine Learning',
+        "ai/ml": 'ai/ml',
         'interactive-installation': 'Interactive Installation',
         'data-visualization': 'Data Visualization',
         narratives: 'Narratives'
@@ -146,13 +145,27 @@
          }
     }
 
+    const comments = {
+        "Discoverability ":"special quote from class",
+        isMap: true 
+    }
 
+function showTooltip(event) {
+    const feature = event.target;
+    const featureName = feature.textContent;
+
+    if (comments[featureName] && comments[featureName].isMap) {
+        console.log("Tooltip for:", featureName);
+    }
+}
 </script>
 
 <style>
     body {
         font-family: 'Nunito', sans-serif;
         padding: 2rem;
+        background: #636363;
+background: linear-gradient(90deg,rgba(99, 99, 99, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(99, 99, 99, 1) 100%);
     }
 
     select {
@@ -176,24 +189,46 @@
 
     .changeable {
         display: block;
+        font-weight: bolder;
+          outline: 0px solid transparent;
+        color: #151515;
         font-size: 1.2rem;
         animation-name: changeAnim;
         animation-duration: 5s;
-        animation-timing-function: ease-in-out;
+        /* animation-timing-function: ease-in-out; */
+                animation-timing-function: ease;
+
         animation-iteration-count: infinite; /* or a specific number */
+                border: dashed 1px rgba(85, 85, 85, 0.214);
+                border-radius: 15px;
+                padding: 5px;
+                
+
     }
 
     .unchangeable {
         opacity: 0.5;
+        display: block;
+                font-weight: bolder;
+        font-size: 1.2rem;
+
         cursor: not-allowed;
+        border: double black 4px;
+          outline: 0px solid transparent;
+        padding: 20px;
+        color: black;
+        background-color: #E9E9ED;
+        .no-drop {cursor: no-drop;}
+
+
     }
 
     @keyframes changeAnim {
       0% {
-        transform: scale(1); /* Starting state */
+        transform: scale(.5); /* Starting state */
       }
       50% {
-        transform: scale(1.2) rotate(10deg); /* Intermediate state */
+        transform: scale(1.2) rotate(20deg); /* Intermediate state */
       }
       100% {
         transform: scale(1); /* Ending state, returning to original size */
