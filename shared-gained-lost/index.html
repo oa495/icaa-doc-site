@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Make sure to load the highlight.js CSS file before the Diff2Html CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans&family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css"
+    />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+    <title> What's Gained, What's Lost, What's Shared?</title>
+</head>
+  <script>
+    const diffString = `diff --git "a/shared-gained-lost/\"old\"-media.md" "b/shared-gained-lost/\"new\"-media.md"
+index 5458ab5..00b1a0a 100644
+--- "a/shared-gained-lost/\"old\"-media.md"
++++ "b/shared-gained-lost/\"new\"-media.md"
+@@ -1,81 +1,95 @@
+-# Old Media
++# New Media
+
+-## Cinema
++## Interactive Installations / Real Time Art
+ - Requires something of the body, cinema requires a fixed gaze, interactive installations some kind of body movement
+ - Relies on light
+-- Finality of authorship
+-- Control over pace
++- Audience/viewer is allowed agency. Agency becomes an operative aspect of the work, explicitly in the form of interface and response - a noticeable change or effect on the work from your engagement with it
+ 
+-## Analog/Traditional 2D Art (pencil, ink, marker, etc)
++
++## Digital 2D Art (programs like Adobe, Procreate, etc)
+ - Technical elements (composition, value, color, shape, line, light)
+-- Tactility and  privacy/ownership
++- Lost to app or storage issues, can be stolen/scraped when posted online. of tools: many are subscription-based, not actually owned by user
++- Digital tools can make production faster and provide shortcuts for things like erasing. - Easier to share. Access to all tools in one place instead of having to buy expensive art supplies, more portable. 
++
+ 
+-## Cinema
++## Videogames
+  - Storytelling, cinematography
+- - Assurance of intentionality with each frame
++ - Choice making, learning by doing, emergent storytelling, (sometimes) 3D sense of space / existence of “something around the corner” to explore, locus of agency
++
+ 
+-## Camera photography
++## AI/Generated Images
+ - Can be manipulated, staged, rehearsed
+-- Handheld device, some interaction with the world
+ 
+-## Painting (in Gallery)
++
++## Image/Video in Feed
+ - Can use color, sizes, shapes. Two dimensional. Has (only?) surface.
+ - Rectangular frame
+-- Shared Context in relation to multiple authors/artists
+-- Curation
++- Can't control context (can see an art piece next to a picture of scrambled eggs)
++- Curation based on algorithm
+ - Requires some access to system/ institution (gallery, or internet/technology)
+-- Aura
+-- The third dimension of images (texture)
+-- Tactility
++- Abundance of images
++- Images from far away places, access
++- Surveillance
+ 
+-## Music– practicing in a space with people (a band) using physical instruments
++## Garageband, virtual instruments, exchanges of samples, mp3s
+ - Sound manipulation, private/intimate shared practice setting, capacity to record + loop
+-- Vibrations in air & ground, micro-reactions to folks’ body movements, sense of improvisation, variations in timbre
++- fine-tuning volume & comfort, visual representation of layering, retroactive sound-editing
++
+ 
+-## Hand-drawn animation
++## 3D animation
+ - Storytelling, character performance, emotional expression. Core principles of animation.
+-- Organic charms, stylistic variety of lines drawn by hand. Animators used to have connection with every frame.
++- Reusable rigs and assets. Characters don’t need to be drawn every frame. environment models projected into 2D camera
++- Hardware demands and cost. Heavy technical knowledge now required. 
+ 
+-## Physical games
++## Digital games
+ - Player agency, rules, play
+-- Tangibility (game pieces, other bodies), physical sociality
++- Interactivity outside physical space, adaptivity outside of individual players, no thinking together, digital sociality
+ 
+-## Traditional sculpture
++## 3D Sculpture
+ - form-making, proportions, composition
+ - shape creation
+ - material shaping
+-- materiality, uniqueness, “faults”, can touch and feel
++- “Infinite” reproducibility, infinite undo/redo, smoothness, ease of sharing
++- Only move fingers (instead of whole body to see)
+ 
+-## Fictional story/book
++## Interactive Story / Twine
+ - Text, images, emotion, characters, speculation
+ - Relationship to time, space, reality - narrative moves the reader through space and time, and into another reality
+-- Capacity for immersion
+-- Mobility and visibility (someone can see what you are reading in public)
+-- Tactility
+-- Personalization (where you dog ear the book, where you might write in the margins)
+-- Constrained by availability & geographic access, book bans/destruction
++- Choice/agency
++- Easier to share, multiple people can access at the same time, are still plugged into www
++- Capacity for other aesthetic elements outside of text (images (moving or otherwise), music, etc)
++- New means of non-linearity
++- Constrained by the web, limited by wifi connections, access to technical infrastructure
+ 
+-## Physical archive
++## Digital archive
+ - Memory
+ - Recording, classifying, and delineating spaces for information
+ - Limited by physical constraints(space for objects vs. data centers)
+ - Ongoing investments needed for materials (physical representation vs. data refinement tools)
+ - The consequences of choice become visible (One must cross out/qualify/start over vs. reorganize)
+-- Feeling of permanence
++- Perfected presentation (given the ability to infinitely delete and edit), curation made easier
++- Sooo many copies
+ 
+ 
+-## Music Albums
++## Streaming music albums
+ - Can listen to music of your choice
+-- Deliberate, inescapable curation (in a particular order)
+-- Having the physicality of the album cover and booklet.
++- ease of access, can listen anywhere
+ 
+-## Pop-up ads
++## Personalized ads
+ - annoyance
++- high interaction, interrupts attention/activity, knows what you want before you do, predictive
+ 
+-## ​​Assemblage/ Collage
++
++## ​Data / Web-Scraping
+ - Reuse of found “objects”, Recontextualization
++- No physical engagement with work, mediated by screen
++- Legal concerns, access to information deliberately made private
++
++
++## Web Zine
++- Interactivity
++- No constraints to physical materials like paper or ink, constrained by infrastructures of the web server farms or wi-fi connection
++- Infinite access
++
++
+ 
+-## Zine
+-- Tangibility / tactility
+-- Constrained to physical materials and infrastructures of the web server farms or wi-fi connection
+-- Physical exchange of media
+`;
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var targetElement = document.getElementById('myDiffElement');
+      var configuration = {
+        drawFileList: false,
+        fileListToggle: false,
+        fileListStartVisible: false,
+        fileContentToggle: false,
+        matching: 'words',
+        outputFormat: 'unified',
+        synchronisedScroll: true,
+        highlight: true,
+        renderNothingWhenEmpty: false,
+      };
+      var diff2htmlUi = new Diff2HtmlUI(targetElement, diffString, configuration);
+      diff2htmlUi.draw();
+      diff2htmlUi.highlightCode();
+    });
+  </script>
+  <body>
+    <h1>What's Gained, What's Lost, What's Shared?</h1>
+    <p>
+        From an in-class exercise, a reflection on moving from "old" mediums to "new" mediums. What is gained, what is lost when we make the move? And what remains regardless? 
+    </p>
+    <section class="quotes">
+        <h2>Meta Conversation on what even "old" media is</h2>
+        <blockquote>
+            It is funny how the rise of photography and cinema were seen as cataclysmic for art (and politics) —they were the “new” media of the time, and marginalized in context of “fine” art … and now they are our “old” media 😅” - <strong>Audrey</strong>, ICAA Learner
+        </blockquote>
+        
+        <blockquote>
+            My take (very personal!) of AI is that it's simultaneously a data-collection tool, and a tool for digital visual production.... but not a medium of its own? I would consider it a tool for an existing medium” - <strong>Kristina</strong>, ICAA Learner
+        </blockquote>
+
+        <blockquote>
+            Thinking about the Kodak Charmera camera: a keychain camera that feels very retro and people assumed was vintage when it came onto the market, but actually is so new that it’s only available for preorder. what makes something feel like old media vs. new media can be very untethered from chronological time” - <strong>Lee</strong>, ICAA Assistant Teacher
+        </blockquote>
+    </section>
+    <section class="convo">
+        <h2>Conversation Excerpt on "New Media" as a Term</h2>
+        <p><strong><u>EMILY</u></strong></p>
+        <p>
+            I was just thinking that new media is also a political term within cinema. Because it was a union distinction, new media wasn't covered work for a long time or then it had its own contract included and YouTube lived in that for a long long time and then they dissolved the new media because it was still considered cinematic labor, the same job roles. So there's similar things I think happening now with AI as you mentioned like is that new media or is it cinema and there's this whole other place where that's debated for different reasons of labor rights and I just think it's interesting because it remains contentious is like a way of disqualifying a professional legitimacy from a corporate perspective.
+        </p>
+
+        <p><strong><u>YELI</u/strong></p>
+        <p>
+            So, the term new media was, "Oh, this kind of work doesn't require as much and so we're going to...
+        </p>
+
+        <p><strong><u>EMILY</u></strong></p>
+        <p>
+            Yeah, it doesn't qualify as cinematic labor. If you're a grip or boom operator making something that's screened on YouTube or YouTube Red, you didn't have the same established labor rights as somebody doing the same exact work on Law and Order. Then it had its own contract. So it was less pay. And then that was dissolved in this last strike as a separate category.
+        </p>
+    </section>
+    <div id="myDiffElement"></div>
+  </body>
+</html>
+<style>
+  body {
+    margin: 2rem;
+    font-family: "Elms Sans", sans-serif;
+  }
+
+  h1 {
+    font-family: "Kanit", sans-serif;
+    font-size: 3rem;
+  }
+
+  .quotes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  blockquote {
+    font-style: italic;
+    border-left: 1px dashed black;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  section {
+    margin: 1rem;
+  }
+
+  section h2 {
+    display: flex;
+    outline: 1px solid black;
+    align-items: center;
+    padding: 1rem 0;
+    justify-content: center;
+    font-weight: bolder;
+  }
+</style>

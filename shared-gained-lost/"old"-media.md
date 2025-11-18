@@ -1,81 +1,95 @@
 # Old Media
 
-## Cinema
+## Interactive Installations / Real Time Art
 - Requires something of the body, cinema requires a fixed gaze, interactive installations some kind of body movement
 - Relies on light
-- Finality of authorship
-- Control over pace
+- Audience/viewer is allowed agency. Agency becomes an operative aspect of the work, explicitly in the form of interface and response - a noticeable change or effect on the work from your engagement with it
 
-## Analog/Traditional 2D Art (pencil, ink, marker, etc)
+
+## Digital 2D Art (programs like Adobe, Procreate, etc)
 - Technical elements (composition, value, color, shape, line, light)
-- Tactility and  privacy/ownership
+- Lost to app or storage issues, can be stolen/scraped when posted online. of tools: many are subscription-based, not actually owned by user
+- Digital tools can make production faster and provide shortcuts for things like erasing. - Easier to share. Access to all tools in one place instead of having to buy expensive art supplies, more portable. 
 
-## Cinema
+
+## Videogames
  - Storytelling, cinematography
- - Assurance of intentionality with each frame
+ - Choice making, learning by doing, emergent storytelling, (sometimes) 3D sense of space / existence of “something around the corner” to explore, locus of agency
 
-## Camera photography
+
+## AI/Generated Images
 - Can be manipulated, staged, rehearsed
-- Handheld device, some interaction with the world
 
-## Painting (in Gallery)
+
+## Image/Video in Feed
 - Can use color, sizes, shapes. Two dimensional. Has (only?) surface.
 - Rectangular frame
-- Shared Context in relation to multiple authors/artists
-- Curation
+- Can't control context (can see an art piece next to a picture of scrambled eggs)
+- Curation based on algorithm
 - Requires some access to system/ institution (gallery, or internet/technology)
-- Aura
-- The third dimension of images (texture)
-- Tactility
+- Abundance of images
+- Images from far away places, access
+- Surveillance
 
-## Music– practicing in a space with people (a band) using physical instruments
+## Garageband, virtual instruments, exchanges of samples, mp3s
 - Sound manipulation, private/intimate shared practice setting, capacity to record + loop
-- Vibrations in air & ground, micro-reactions to folks’ body movements, sense of improvisation, variations in timbre
+- fine-tuning volume & comfort, visual representation of layering, retroactive sound-editing
 
-## Hand-drawn animation
+
+## 3D animation
 - Storytelling, character performance, emotional expression. Core principles of animation.
-- Organic charms, stylistic variety of lines drawn by hand. Animators used to have connection with every frame.
+- Reusable rigs and assets. Characters don’t need to be drawn every frame. environment models projected into 2D camera
+- Hardware demands and cost. Heavy technical knowledge now required. 
 
-## Physical games
+## Digital games
 - Player agency, rules, play
-- Tangibility (game pieces, other bodies), physical sociality
+- Interactivity outside physical space, adaptivity outside of individual players, no thinking together, digital sociality
 
-## Traditional sculpture
+## 3D Sculpture
 - form-making, proportions, composition
 - shape creation
 - material shaping
-- materiality, uniqueness, “faults”, can touch and feel
+- “Infinite” reproducibility, infinite undo/redo, smoothness, ease of sharing
+- Only move fingers (instead of whole body to see)
 
-## Fictional story/book
+## Interactive Story / Twine
 - Text, images, emotion, characters, speculation
 - Relationship to time, space, reality - narrative moves the reader through space and time, and into another reality
-- Capacity for immersion
-- Mobility and visibility (someone can see what you are reading in public)
-- Tactility
-- Personalization (where you dog ear the book, where you might write in the margins)
-- Constrained by availability & geographic access, book bans/destruction
+- Choice/agency
+- Easier to share, multiple people can access at the same time, are still plugged into www
+- Capacity for other aesthetic elements outside of text (images (moving or otherwise), music, etc)
+- New means of non-linearity
+- Constrained by the web, limited by wifi connections, access to technical infrastructure
 
-## Physical archive
+## Digital archive
 - Memory
 - Recording, classifying, and delineating spaces for information
 - Limited by physical constraints(space for objects vs. data centers)
 - Ongoing investments needed for materials (physical representation vs. data refinement tools)
 - The consequences of choice become visible (One must cross out/qualify/start over vs. reorganize)
-- Feeling of permanence
+- Perfected presentation (given the ability to infinitely delete and edit), curation made easier
+- Sooo many copies
 
 
-## Music Albums
+## Streaming music albums
 - Can listen to music of your choice
-- Deliberate, inescapable curation (in a particular order)
-- Having the physicality of the album cover and booklet.
+- ease of access, can listen anywhere
 
-## Pop-up ads
+## Personalized ads
 - annoyance
+- high interaction, interrupts attention/activity, knows what you want before you do, predictive
 
-## ​​Assemblage/ Collage
+
+## ​Data / Web-Scraping
 - Reuse of found “objects”, Recontextualization
+- No physical engagement with work, mediated by screen
+- Legal concerns, access to information deliberately made private
 
-## Zine
-- Tangibility / tactility
-- Constrained to physical materials and infrastructures of the web server farms or wi-fi connection
-- Physical exchange of media
+
+## Web Zine
+- Interactivity
+- No constraints to physical materials like paper or ink, constrained by infrastructures of the web server farms or wi-fi connection
+- Infinite access
+
+
+
