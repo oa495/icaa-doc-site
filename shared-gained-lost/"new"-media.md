@@ -6,13 +6,16 @@
 - Audience/viewer is allowed agency. Agency becomes an operative aspect of the work, explicitly in the form of interface and response - a noticeable change or effect on the work from your engagement with it
 
 
-## Analog/Traditional 2D Art (pencil, ink, marker, etc)
+## Digital 2D Art (programs like Adobe, Procreate, etc)
 - Technical elements (composition, value, color, shape, line, light)
-- Tactility and  privacy/ownership
+- Lost to app or storage issues, can be stolen/scraped when posted online. of tools: many are subscription-based, not actually owned by user
+- Digital tools can make production faster and provide shortcuts for things like erasing. - Easier to share. Access to all tools in one place instead of having to buy expensive art supplies, more portable. 
 
-## Cinema
+
+## Videogames
  - Storytelling, cinematography
- - Assurance of intentionality with each frame
+ - Choice making, learning by doing, emergent storytelling, (sometimes) 3D sense of space / existence of “something around the corner” to explore, locus of agency
+
 
 ## Camera photography
 - Can be manipulated, staged, rehearsed
