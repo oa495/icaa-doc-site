@@ -4,30 +4,28 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans&family=Kanit&family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
    </head>
     <body>
         <main>
             <section class="text">
                 <p>
-                    The class project for the Spring 2024 iteration of Interrogating Computational Approaches To Art at the School for Poetic Computation involved co-annotating Amiri Baraka's Technology & Ethos on a glitched version of Google Docs.
+                    The class project for the Spring 2024 iteration of Interrogating Computational Approaches To Art at the School for Poetic Computation involved co-annotating <a href="http://www.soulsista.com/titanic/baraka.html">Amiri Baraka's Technology & Ethos</a> on a glitched version of Google Docs.
                 </p>
-                <img src="./prisms.png" alt="" />
+                <img src="./prisms.png" alt="Three layers stacked on top each other. Topmost layer is labeled 'The new media object', middle layer is labeled 'The interface', bottom layer is labeled 'Everything outside the interface (society)'." />
                 <p>
                     The three prisms represent my proposed framework for interrogating computational art work: examining it first on the level of the artifact, and the decisions made by the creator, then examining the interface and the technology the work is built upon or accessed through (headset, phone, projection), then lastly on the societal level, considering the historical and social contexts that inform both the creation and reception of the work.
                 </p>
                 <p>
-                    The <a href="https://github.com/nimast/prismatic-web">glitched google docs browser extension</a> was created by a learner in the class, <a href="https://nimrodastarhan.com/">Nimrod Astarhan</a> and the teacher, <a href="">Omayeli Arenyeka</a>
+                    The <a href="https://github.com/nimast/prismatic-web">glitched google docs browser extension</a> was created by a learner in the class, <a href="https://nimrodastarhan.com/">Nimrod Astarhan</a> and the teacher, <a href="">Omayeli Arenyeka.</a>
                 </p>
             </section>
             <section class="recording">
-                <video controls src="./co-annotation.mov"></video>
+                <video controls>
+                    <source type="video/mov" src="https://drive.google.com/uc?export=download&id=12xHRQzcwRyA2vPkoJj2Ic3MI9eBIK4Hu"></source>
+                </video>
             </section>
         </main>
-        <footer>
-            <a href="../built-ins/index.html">Built-ins</a>
-            <a href="../index.html">Home</a>
-        </footer>
     </body>
 </html>
 
@@ -35,7 +33,12 @@
     body {
         margin: 0;
         padding: 0;
+        font-size: 1.2rem;
         font-family: "Nunito", sans-serif;
+    }
+
+    a, a:visited {
+        color: #1976ed;
     }
 
     main {
@@ -44,8 +47,11 @@
     }
 
     .text {
-        width: 60vw;
+        width: 40vw;
         padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .recording {
@@ -60,7 +66,7 @@
     }
 
     img {
-        width: 100%;
+        width: 60%;
     }
 
     footer {

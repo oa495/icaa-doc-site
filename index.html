@@ -1,17 +1,18 @@
 <html>
-<head>
-    <title>Interrogating Computational Approaches To Art</title>
-    <meta charset="UTF-8">
+    <head>
+        <title>Interrogating Computational Approaches To Art</title>
+        <meta charset="UTF-8">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Elms+Sans&family=Kanit&family=Nunito&display=swap" rel="stylesheet">
-    </head>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"></head>
+    </head> 
     <body>
-        <div class="parallelogram">
+        <div class="parallelogram bottom-layer">
             <a class="link-down" href="./built-ins/index.html">Built-ins</a>
             <a class="link-up" href="https://docs.google.com/document/d/1Mk2ZqVbNgcC-4jbBZFV79NDMabjjIfRIajiIv9cwowg/edit?pli=1&tab=t.0">Syllabus</a>
         </div>
-        <div class="parallelogram">
+        <div class="parallelogram middle-layer">
+            <a class="link-down-left" href="./shared-gained-lost/index.html">Shared, Gained, Lost</a>
             <a class="link-up" href="./glitched-docs/index.html">Glitched Google Docs</a>
         </div>
         <div class="parallelogram animated-border-box-glow">
@@ -23,87 +24,107 @@
             </marquee>
         </div>
     </body>
-</head>
 </html>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Nunito", sans-serif;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Nunito", sans-serif;
+}
 
-    h1 {
-        font-size: 32em;
-        font-family: "Elms Sans", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-        color: white;
-        text-shadow: 
-        -1px -1px 0 black, /* Top-left shadow */
-        1px -1px 0 black,  /* Top-right shadow */
-        -1px 1px 0 black,  /* Bottom-left shadow */
-        1px 1px 0 black;   /* Bottom-right shadow */ 
-        filter: blur(2px);
-    }
+h1 {
+    font-size: 32vw;
+    max-width: 100%;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-shadow: 
+    -2px -2px 0 black, /* Top-left shadow */
+    2px -2px 0 black,  /* Top-right shadow */
+    -2px 2px 0 black,  /* Bottom-left shadow */
+    2px 2px 0 black;   /* Bottom-right shadow */ 
+    filter: blur(2px);
+}
 
-    .parallelogram {
-        position: absolute;
-        border: 1px ridge black;
-        width: 80vw;
-        transform: skew(-20deg);
-        margin-bottom: -100px;
-        background-color: white;
-    }
+.parallelogram {
+    position: absolute;
+    border: 1px ridge black;
+    width: 80vw;
+    transform: skew(-20deg);
+    background-color: white;
+    transition: all 0.8s ease-in-out;
+    font-size: 1rem;
+    height: 85vh;
+}
 
-    .parallelogram .link-up {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: 1rem;
-    }
+.parallelogram .link-up {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+}
 
-    .parallelogram .link-down {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 1rem;
-    }
-    
-    .parallelogram:nth-child(3) {
-        z-index: 999;
-    }
+.link-down-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
 
-    .parallelogram:nth-child(1) {
-        position: absolute;
-        width: 85vw;
-        height: 80vh;
-        top: 10vh;
-        z-index: 99;
-    }
+.parallelogram .link-down {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+}
 
-    .parallelogram:nth-child(2) {
-        position: absolute;
-        width: 80vw;
-        height: 70vh;
-        left: 10vw;
-        top: 25vh;
-        z-index: -1;
-    }
+.parallelogram:nth-child(3) {
+    z-index: 999;
+}
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }   
+.parallelogram:nth-child(1) {
+    position: absolute;
+    width: 85vw;
+    height: 80vh;
+    top: 10vh;
+    left: 2vw;
+    z-index: 99;
+}
 
-    /*// Glow Border Animation //*/
+.parallelogram:nth-child(2) {
+    position: absolute;
+    width: 80vw;
+    height: 70vh;
+    left: 12vw;
+    top: 25vh;
+    z-index: -1;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}   
+
+a, p, a:visited {
+    color: #1976ed;
+    font-weight: bold;
+}
+
+.middle-layer:hover, .bottom-layer:hover {
+    opacity: 0.6;
+    transform: scale(1.15);
+}
+/*// Glow Border Animation //*/
 
 .animated-border-box, .animated-border-box-glow{ 
   position: absolute;

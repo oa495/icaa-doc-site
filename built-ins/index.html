@@ -4,7 +4,7 @@
         <title>Built-ins / Defaults</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Elms+Sans&family=Kanit&family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"></head>
     </head>
     <body>
         <div x-data="{ selectedVal: 'website' }">
@@ -199,12 +199,15 @@
 <style>
     body {
         font-family: 'Nunito', sans-serif;
+        font-weight: 200;
         padding: 2rem;
     }
 
     select {
         font-size: 1rem;
         padding: 0.5rem 0.5rem;
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
     }
 
     ul {
@@ -244,13 +247,11 @@
         border: dashed rgba(0, 0, 0, 0.6) 1px;
                 border-radius: 5px;
                 padding: 20px;
-                
 
     }
 
     #droppy{
         background-color: rgba(255, 255, 255, 0.451);
-        font-weight: bolder;
     }
 
     .unchangeable {
@@ -273,7 +274,7 @@
         right: 0;
         width: 25%;
         height: 5%;
-        transition: height 0.3s ease;
+        transition: height 0.3s ease-in-out;
         cursor: pointer;
     }
 
