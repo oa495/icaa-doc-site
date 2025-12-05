@@ -188,7 +188,7 @@
 
     function toggleHeight() {
         const followUpSection = document.querySelector('.follow-up');
-        if (followUpSection.style.height === '50%') {
+        if (followUpSection.style.height === '50%' || followUpSection.style.height === '90%') {
             followUpSection.style.height = '30%';
         } else {
             followUpSection.style.height = '50%';
@@ -276,6 +276,12 @@
         height: 30%;
         transition: height 0.3s ease-in-out;
         cursor: pointer;
+    }
+
+    @media (max-height: 400px) {
+        .follow-up {
+            height: 90%;
+        }
     }
 
     @keyframes changeAnim {
