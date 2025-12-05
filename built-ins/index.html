@@ -160,7 +160,7 @@
     const comments = {
         "Discoverability ":"On the note of discoverability, how are we prompted to encounter a website? Does it come up in a related google search, or does a friend share a link on socials, or is it in a gallery, etc?",
         "Spatial metaphors (index, posts, contact)": "'How does the space feel? How does construction of the space influence user's behavior? Is there a discrete location you go to, or is it part of a continuous state of connectivity (with other sites, with the network at large...?'",
-        "Language used on the site": "A Korean designer spoke about domains having to be English and how that affects non-English speakers. <a href=\"https://youtu.be/5CmOS_m8ug8?si=uwAQrT7oV8OzPI7C\"/>",
+        "Domains, .us/.in": "A Korean designer spoke about domains having to be English and how that affects non-English speakers. <a href=\"https://youtu.be/5CmOS_m8ug8?si=uwAQrT7oV8OzPI7C\"/>",
         "friction of interaction": "How it facilitates or breaks 'ultimate smooth flow' (re: <a href=\"https://soulellis.com/writing/feedtime/index.html\">Feed Time reading</a>). Is it smooth? laggy?",
         "hardware components (the materials that compose them)": "How much of the construction of the work is exposed, how much is purposefully hidden? Do the seams show?",
         "source of technology": "Of course, all tracing back to military-industrial but still) - open source, community-based, arts-oriented, industrial, commercial, licensed",
@@ -188,10 +188,10 @@
 
     function toggleHeight() {
         const followUpSection = document.querySelector('.follow-up');
-        if (followUpSection.style.height === '30%') {
-            followUpSection.style.height = '5%';
-        } else {
+        if (followUpSection.style.height === '50%') {
             followUpSection.style.height = '30%';
+        } else {
+            followUpSection.style.height = '50%';
         }
     }
 </script>
@@ -272,8 +272,8 @@
         border: 1px dashed gray;
         padding: 1rem;
         right: 0;
-        width: 25%;
-        height: 5%;
+        width: 40%;
+        height: 30%;
         transition: height 0.3s ease-in-out;
         cursor: pointer;
     }
