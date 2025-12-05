@@ -191,6 +191,10 @@
         if (followUpSection.style.height === '50%' || followUpSection.style.height === '90%') {
             followUpSection.style.height = '30%';
         } else {
+            if (window.innerHeight < 400) {
+                followUpSection.style.height = '90%';
+                return;
+            }
             followUpSection.style.height = '50%';
         }
     }
